@@ -9,7 +9,7 @@
 	<version>4.19.0</version>	
     
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.sourceEncoding>ASCII</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding> 
 	</properties>
 	
@@ -356,6 +356,7 @@
 				          </execution>
 				      </executions>
 				  </plugin>
+				  <plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
