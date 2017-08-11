@@ -1,4 +1,4 @@
-﻿/**
+/**
  * utilitario.mensajes.consultas.ConsolidadoCreditosAsignadosOV.java
  */
 package utilitario.mensajes.consultas;
