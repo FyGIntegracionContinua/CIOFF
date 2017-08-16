@@ -310,61 +310,6 @@
 				         </execution>
 				     </executions>
 				 </plugin>
-				 <plugin>
-				    <groupId>org.codehaus.mojo</groupId>
-				    <artifactId>findbugs-maven-plugin</artifactId>
-				    <version>2.3.3</version>
-				    <configuration>
-				        <trace>false</trace>
-				        <effort>Low</effort>
-				        <threshold>Low</threshold>
-				        <xmlOutput>true</xmlOutput>
-				        <failOnError>false</failOnError>
-				    </configuration>
-				    <executions>
-				        <execution>
-				            <phase>verify</phase>
-				            <goals>
-				                <goal>findbugs</goal>
-				            </goals>
-				        </execution>
-				    </executions>
-				</plugin>
-				 <plugin>
-				      <groupId>org.codehaus.groovy.maven</groupId>
-				      <artifactId>gmaven-plugin</artifactId>
-				      <version>1.0</version>
-				      <executions>
-				          <execution>
-				              <phase>install</phase>
-				              <goals>
-				                  <goal>execute</goal>
-				              </goals>
-				              <configuration>
-				                  <source>
-				                      def file = new File("${project.build.directory}/findbugsXml.xml")
-				                      if (!file.exists()) {
-				                      log.warn("Findbugs XML report is absent: " + file.getPath())
-				                      }
-				                      def xml = new XmlParser().parse(file)
-				                      def bugs = xml.BugInstance
-				                      def total = bugs.size()
-				                      if (total &gt; 0) {
-				                      log.info("Total bugs: " + total)
-				                      for (i in 0..total-1) {
-				                      def bug = bugs[i]
-				                      log.info("\n"+
-				                      bug.LongMessage.text()
-				                      + " " + bug.Class.'@classname'
-				                      + " " + bug.Class.SourceLine.Message.text()
-				                      +"\n")
-				                      }
-				                      }
-				                  </source>
-				              </configuration>
-				          </execution>
-				      </executions>
-				  </plugin>
 				  <plugin>
 					  <groupId>org.codehaus.mojo</groupId>
 					  <artifactId>sonar-maven-plugin</artifactId>
