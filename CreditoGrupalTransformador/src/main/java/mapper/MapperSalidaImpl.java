@@ -59,8 +59,8 @@ public class MapperSalidaImpl implements MapperSalida {
 	 */
 	private String normalizaCaracetresEspeciales( String desnormalizada ) {
 		String
-		normalizada  = desnormalizada.replace("?", "//01");
-		normalizada  = normalizada.replace("?", "//02");
+		normalizada  = desnormalizada.replace("A", "//01");
+	/*	normalizada  = normalizada.replace("?", "//02");
 		normalizada  = normalizada.replace("?", "//03");
 		normalizada  = normalizada.replace("?", "//04");
 		normalizada  = normalizada.replace("?", "//05");
@@ -100,7 +100,7 @@ public class MapperSalidaImpl implements MapperSalida {
 		normalizada  = normalizada.replace("?", "//39");
 		normalizada  = normalizada.replace("?", "//40");
 		normalizada  = normalizada.replace("?", "//41");
-		normalizada  = normalizada.replace("?", "//42");
+		normalizada  = normalizada.replace("?", "//42");*/
 		normalizada  = normalizada.replace(",", "//43");
 		normalizada  = normalizada.replace("'", "//44");
 		normalizada  = normalizada.replace("\"", "//45");
